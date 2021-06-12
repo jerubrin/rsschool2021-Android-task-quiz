@@ -16,8 +16,8 @@ class QuizFragment : Fragment() {
     private var _binding: FragmentQuizBinding? = null
     private val binding get() = _binding!!
 
-    var keysArray :IntArray? = null
     private var selectedAns = -1
+    private var currentQuestion = 0
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -37,8 +37,14 @@ class QuizFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         val fragmentArgs : QuizFragmentArgs by navArgs()
-        keysArray = fragmentArgs.keys
-        if (keysArray != null) binding.previousButton.isEnabled = true
+        keysArray = fragmentArgs.ansver
+        currentQuestion = fragmentArgs.currentQuestion
+
+        if (currentQuestion != 0) binding.previousButton.isEnabled = true
+
+        var keysArrayBack = findNavController().currentBackStackEntry?.savedStateHandle?.getLiveData<IntArray>("answers")?.value
+        if (keysArrayBack != null)
+            keysArray = keysArrayBack
 
         //--------------------------
         binding.question.text = "["
@@ -55,6 +61,10 @@ class QuizFragment : Fragment() {
                     selectedAns = index
                 }
             }
+            if (keysArray != null) {
+                val keysArrayToBack = keysArray?.plus(intArrayOf(selectedAns))
+                findNavController().previousBackStackEntry?.savedStateHandle?.set("answers", keysArrayToBack)
+            }
         }
 
         binding.nextButton.setOnClickListener {
@@ -66,5 +76,9 @@ class QuizFragment : Fragment() {
         binding.previousButton.setOnClickListener {
             findNavController().popBackStack()
         }
+    }
+
+    companion object {
+        var keysArray :IntArray? = null
     }
 }

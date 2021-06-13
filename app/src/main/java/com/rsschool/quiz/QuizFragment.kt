@@ -70,7 +70,13 @@ class QuizFragment : Fragment() {
         }
 
         binding.previousButton.setOnClickListener {
-            findNavController().popBackStack()
+            if (findNavController().previousBackStackEntry != null)
+                findNavController().popBackStack()
+        }
+
+        binding.toolbar.setNavigationOnClickListener {
+            if (findNavController().previousBackStackEntry != null)
+                findNavController().popBackStack()
         }
     }
 

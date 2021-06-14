@@ -5,15 +5,12 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.RadioButton
-import androidx.core.os.bundleOf
-import androidx.core.view.forEach
 import androidx.core.view.forEachIndexed
 import androidx.core.view.get
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import com.rsschool.quiz.databinding.FragmentQuizBinding
-import kotlinx.coroutines.handleCoroutineException
 
 class QuizFragment : Fragment() {
     private var _binding: FragmentQuizBinding? = null
@@ -21,13 +18,13 @@ class QuizFragment : Fragment() {
 
     private var selectedAns = -1
     private var currentQuestion = 0
-    private var keysArray :IntArray? = null
+    private var keysArray :IntArray = intArrayOf()
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         _binding = FragmentQuizBinding.inflate(inflater, container, false)
         return binding.root
     }
@@ -41,19 +38,22 @@ class QuizFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         val fragmentArgs : QuizFragmentArgs by navArgs()
-        keysArray = fragmentArgs.ansver
+        keysArray = fragmentArgs.ansver ?: intArrayOf()
         currentQuestion = fragmentArgs.currentQuestion
+        val dataXMLParser = (activity as MainActivity).dataXMLParser
+
+        selectedAns = checkRadioButtonAnswerFromKeyArray(keysArray, currentQuestion)
+
+        keysArray = getBackKeyArray(keysArray)
+        setBackKeyArray(keysArray)
+
+        readQuestionFromXML(dataXMLParser)
 
         if (currentQuestion != 0) binding.previousButton.isEnabled = true
 
-        val wasSelecting = getSelectedFromKeysArray(keysArray, currentQuestion)
-        if (wasSelecting >= 0) {
-            var rb: RadioButton = binding.radioGroup[wasSelecting] as RadioButton
-            rb.setChecked(true)
-            binding.nextButton.isEnabled = true
-            selectedAns = wasSelecting
-        }
+        binding.toolbar.title = resources.getString( R.string.toolbar_title_next ) + " ${currentQuestion + 1}"
 
+        //listeners
         binding.radioGroup.setOnCheckedChangeListener { group, _ ->
             group.forEachIndexed { index, viewRB ->
                 if ((viewRB as RadioButton).isChecked) {
@@ -61,12 +61,20 @@ class QuizFragment : Fragment() {
                     selectedAns = index
                 }
             }
-            keysArray = setKeyToKeyArray(keysArray, selectedAns, currentQuestion)
+            keysArray = setAnswerToKeyArray(keysArray, selectedAns, currentQuestion)
+            setBackKeyArray(keysArray)
         }
 
         binding.nextButton.setOnClickListener {
-            val actionForward = QuizFragmentDirections.actionQuizFragmentSelf(keysArray, currentQuestion + 1)
-            findNavController().navigate(actionForward)
+            if (binding.nextButton.text != resources.getString(R.string.button_text_submit)) {
+                val actionForward =
+                    QuizFragmentDirections.actionQuizFragmentSelf(keysArray, currentQuestion + 1)
+                findNavController().navigate(actionForward)
+            } else {
+                val actionSubmit =
+                    QuizFragmentDirections.actionQuizFragmentToResultFragment(keysArray)
+                findNavController().navigate(actionSubmit)
+            }
         }
 
         binding.previousButton.setOnClickListener {
@@ -80,44 +88,50 @@ class QuizFragment : Fragment() {
         }
     }
 
-    override fun onResume() {
-        super.onResume()
-
-        var keysArrayBack =
-            findNavController().currentBackStackEntry?.savedStateHandle?.getLiveData<IntArray>("answersBack")?.value
-        if (keysArrayBack != null) {
-            keysArray = keysArrayBack
-        }
-        //--------------------------
-        binding.question.text = "["
-        keysArray?.forEach {
-            binding.question.text = "${binding.question.text} $it"
-        }
-        binding.question.text = "${binding.question.text}] currentQ=$currentQuestion"
-        //--------------------------
-        keysArray = setKeyToKeyArray(keysArray, selectedAns, currentQuestion)
-    }
-
-    private fun setKeyToKeyArray(intArray: IntArray?, answer: Int, currentQ: Int): IntArray? {
+    private fun setAnswerToKeyArray(intArray: IntArray, answer: Int, currentQ: Int): IntArray {
         var newArray = intArray
-        if (newArray == null) {
-            newArray = intArrayOf(answer)
-        } else {
-            if (newArray?.lastIndex!! < currentQ) {
-                newArray = newArray?.plus(intArrayOf(answer))
-            } else {
-                newArray!![currentQ] = answer
-            }
-        }
-        if (newArray != null) {
-            findNavController().previousBackStackEntry?.savedStateHandle?.set("answersBack", newArray)
-        }
+        if (newArray.lastIndex < currentQ)
+            newArray += intArrayOf(answer)
+        else
+            newArray[currentQ] = answer
         return newArray
     }
 
-    private fun getSelectedFromKeysArray(intArray: IntArray?, currentQ: Int): Int {
-        var newArray: IntArray? = intArray ?: return -1
-        if (newArray?.lastIndex!! < currentQ) return -1
+    private fun setBackKeyArray(intArray: IntArray) {
+        if (intArray.isNotEmpty()) {
+            findNavController().previousBackStackEntry?.savedStateHandle?.set("answersBack", intArray)
+        }
+    }
+
+    private fun getAnswerFromKeyArray(intArray: IntArray, currentQ: Int): Int {
+        val newArray: IntArray = intArray
+        if (newArray.lastIndex < currentQ) return -1
         return newArray[currentQ]
+    }
+
+    private fun getBackKeyArray(intArray: IntArray) :IntArray {
+        val keysArrayBack =
+            findNavController().currentBackStackEntry?.savedStateHandle?.getLiveData<IntArray>("answersBack")?.value
+        return keysArrayBack ?: intArray
+    }
+
+    private fun checkRadioButtonAnswerFromKeyArray(intArray: IntArray, currentQ: Int) : Int {
+        val wasSelecting = getAnswerFromKeyArray(intArray, currentQ)
+        if (wasSelecting >= 0) {
+            val rb: RadioButton = binding.radioGroup[wasSelecting] as RadioButton
+            rb.isChecked = true
+            binding.nextButton.isEnabled = true
+        }
+        return wasSelecting
+    }
+
+    private fun readQuestionFromXML(dataXMLParser: DataQuizXMLParser) {
+        if (currentQuestion >= dataXMLParser.lastQuestionNumber()){
+            binding.nextButton.text = resources.getString(R.string.button_text_submit)
+        }
+        binding.question.text = dataXMLParser.getQuestion(currentQuestion)
+        dataXMLParser.getAnswerList(currentQuestion).forEachIndexed { index, str ->
+            (binding.radioGroup[index] as RadioButton).text = str
+        }
     }
 }

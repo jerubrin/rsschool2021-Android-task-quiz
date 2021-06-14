@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<quizdata>
+    <questions>
+        <question>
+            <title>Вопрос 1</title>
+            <answers>
+                <answer>Ответ 1 на вопрос 1</answer>
+                <answer>Ответ 2 на вопрос 1</answer>
+                <answer>Ответ 3 на вопрос 1</answer>
+                <answer>Ответ 4 на вопрос 1</answer>
+                <answer>Ответ 5 на вопрос 1</answer>
+            </answers>
+        </question>
+        <question>
+            <title>Вопрос 2</title>
+            <answers>
+                <answer>Ответ 1 на вопрос 2</answer>
+                <answer>Ответ 2 на вопрос 2</answer>
+                <answer>Ответ 3 на вопрос 2</answer>
+                <answer>Ответ 4 на вопрос 2</answer>
+                <answer>Ответ 5 на вопрос 2</answer>
+            </answers>
+        </question>
+        <question>
+            <title>Вопрос 3</title>
+            <answers>
+                <answer>Ответ 1 на вопрос 3</answer>
+                <answer>Ответ 2 на вопрос 3</answer>
+                <answer>Ответ 3 на вопрос 3</answer>
+                <answer>Ответ 4 на вопрос 3</answer>
+                <answer>Ответ 5 на вопрос 3</answer>
+            </answers>
+        </question>
+        <question>
+            <title>Вопрос 4</title>
+            <answers>
+                <answer>Ответ 1 на вопрос 4</answer>
+                <answer>Ответ 2 на вопрос 4</answer>
+                <answer>Ответ 3 на вопрос 4</answer>
+                <answer>Ответ 4 на вопрос 4</answer>
+                <answer>Ответ 5 на вопрос 4</answer>
+            </answers>
+        </question>
+        <question>
+            <title>Вопрос 5</title>
+            <answers>
+                <answer>Ответ 1 на вопрос 5</answer>
+                <answer>Ответ 2 на вопрос 5</answer>
+                <answer>Ответ 3 на вопрос 5</answer>
+                <answer>Ответ 4 на вопрос 5</answer>
+                <answer>Ответ 5 на вопрос 5</answer>
+            </answers>
+        </question>
+    </questions>
+    <keys>
+        <key>1</key>
+        <key>2</key>
+        <key>3</key>
+        <key>4</key>
+        <key>5</key>
+    </keys>
+</quizdata>

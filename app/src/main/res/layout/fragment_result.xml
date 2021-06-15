@@ -43,7 +43,7 @@
     <Button
         android:id="@+id/button_back"
         android:text="@string/button_result_back"
-        android:drawableStart="@drawable/outline_autorenew_black_18"
+        app:icon="@drawable/outline_autorenew_black_18"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="8dp"
@@ -55,7 +55,7 @@
     <Button
         android:id="@+id/button_exit"
         android:text="@string/button_result_exit"
-        android:drawableStart="@drawable/outline_logout_black_18"
+        app:icon="@drawable/outline_logout_black_18"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="8dp"
@@ -67,7 +67,7 @@
     <Button
         android:id="@+id/button_share"
         android:text="@string/button_result_share"
-        android:drawableStart="@drawable/outline_share_black_18"
+        app:icon="@drawable/outline_share_black_18"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="8dp"

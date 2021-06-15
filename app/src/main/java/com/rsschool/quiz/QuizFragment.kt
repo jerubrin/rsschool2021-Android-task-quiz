@@ -5,12 +5,17 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.RadioButton
+import androidx.core.view.forEach
 import androidx.core.view.forEachIndexed
 import androidx.core.view.get
 import androidx.fragment.app.Fragment
+import androidx.navigation.NavBackStackEntry
+import androidx.navigation.NavOptions
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import com.rsschool.quiz.databinding.FragmentQuizBinding
+import java.util.*
+
 
 class QuizFragment : Fragment() {
     private var _binding: FragmentQuizBinding? = null
@@ -38,18 +43,15 @@ class QuizFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         val fragmentArgs : QuizFragmentArgs by navArgs()
-        keysArray = fragmentArgs.ansver ?: intArrayOf()
+        keysArray = fragmentArgs.answer ?: intArrayOf()
         currentQuestion = fragmentArgs.currentQuestion
         val dataXMLParser = (activity as MainActivity).dataXMLParser
 
-        selectedAns = checkRadioButtonAnswerFromKeyArray(keysArray, currentQuestion)
+        if (currentQuestion != 0) binding.previousButton.isEnabled = true
 
-        keysArray = getBackKeyArray(keysArray)
-        setBackKeyArray(keysArray)
+
 
         readQuestionFromXML(dataXMLParser)
-
-        if (currentQuestion != 0) binding.previousButton.isEnabled = true
 
         binding.toolbar.title = resources.getString( R.string.toolbar_title_next ) + " ${currentQuestion + 1}"
 
@@ -71,8 +73,12 @@ class QuizFragment : Fragment() {
                     QuizFragmentDirections.actionQuizFragmentSelf(keysArray, currentQuestion + 1)
                 findNavController().navigate(actionForward)
             } else {
+                val correctKeys = dataXMLParser.getKeys()
                 val actionSubmit =
-                    QuizFragmentDirections.actionQuizFragmentToResultFragment(keysArray)
+                    QuizFragmentDirections.actionQuizFragmentToResultFragment(keysArray, correctKeys)
+                while (findNavController().previousBackStackEntry != null) {
+                    findNavController().popBackStack()
+                }
                 findNavController().navigate(actionSubmit)
             }
         }
@@ -88,6 +94,13 @@ class QuizFragment : Fragment() {
         }
     }
 
+    override fun onResume() {
+        super.onResume()
+        keysArray = getBackKeyArray(keysArray)
+        selectedAns = checkRadioButtonAnswerFromKeyArray(keysArray, currentQuestion)
+        setBackKeyArray(keysArray)
+    }
+
     private fun setAnswerToKeyArray(intArray: IntArray, answer: Int, currentQ: Int): IntArray {
         var newArray = intArray
         if (newArray.lastIndex < currentQ)
@@ -98,7 +111,7 @@ class QuizFragment : Fragment() {
     }
 
     private fun setBackKeyArray(intArray: IntArray) {
-        if (intArray.isNotEmpty()) {
+        if (findNavController().previousBackStackEntry != null) {
             findNavController().previousBackStackEntry?.savedStateHandle?.set("answersBack", intArray)
         }
     }
@@ -121,6 +134,9 @@ class QuizFragment : Fragment() {
             val rb: RadioButton = binding.radioGroup[wasSelecting] as RadioButton
             rb.isChecked = true
             binding.nextButton.isEnabled = true
+        } else {
+            binding.radioGroup.clearCheck()
+            binding.nextButton.isEnabled = false
         }
         return wasSelecting
     }

@@ -30,9 +30,12 @@ class DataQuizXMLParser(xmlResourceParser: XmlResourceParser) {
         return questionList[questionNumber].question
     }
 
-
     fun getAnswerList(questionNumber: Int) : MutableList<String> {
         return questionList[questionNumber].answers
+    }
+
+    fun getAnswer(questionNumber: Int, index: Int): String{
+        return questionList[questionNumber].answers[index]
     }
 
     fun getKeys() : IntArray {

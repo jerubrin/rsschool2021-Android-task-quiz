@@ -10,4 +10,9 @@
     <string name="button_result_back">Back</string>
     <string name="button_result_exit">Exit</string>
     <string name="button_result_share">Share</string>
+    
+    <string name="i_result_answered">I have answered</string>
+    <string name="list_of_question_title">Look at my answers:</string>
+    <string name="my_answer">My answer:</string>
+    <string name="choose_client">Choose Email Client:</string>
 </resources>

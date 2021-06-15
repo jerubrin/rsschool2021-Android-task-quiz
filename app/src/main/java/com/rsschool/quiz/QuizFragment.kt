@@ -5,16 +5,12 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.RadioButton
-import androidx.core.view.forEach
 import androidx.core.view.forEachIndexed
 import androidx.core.view.get
 import androidx.fragment.app.Fragment
-import androidx.navigation.NavBackStackEntry
-import androidx.navigation.NavOptions
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import com.rsschool.quiz.databinding.FragmentQuizBinding
-import java.util.*
 
 
 class QuizFragment : Fragment() {

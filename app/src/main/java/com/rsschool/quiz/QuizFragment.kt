@@ -1,10 +1,12 @@
 package com.rsschool.quiz
 
+import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.RadioButton
+import androidx.appcompat.view.ContextThemeWrapper
 import androidx.core.view.forEachIndexed
 import androidx.core.view.get
 import androidx.fragment.app.Fragment
@@ -20,13 +22,30 @@ class QuizFragment : Fragment() {
     private var selectedAns = -1
     private var currentQuestion = 0
     private var keysArray :IntArray = intArrayOf()
+    private var themesArray = intArrayOf(
+        R.style.Theme_Quiz_First,
+        R.style.Theme_Quiz_Second,
+        R.style.Theme_Quiz_Third,
+        R.style.Theme_Quiz_Fourth,
+        R.style.Theme_Quiz_Fives
+    )
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        _binding = FragmentQuizBinding.inflate(inflater, container, false)
+        val fragmentArgs : QuizFragmentArgs by navArgs()
+        keysArray = fragmentArgs.answer ?: intArrayOf()
+        currentQuestion = fragmentArgs.currentQuestion
+
+        val contextThemeWrapper = ContextThemeWrapper(
+            activity,
+            if(currentQuestion <= 5) themesArray[currentQuestion] else themesArray[6]
+        )
+        val localInflater = inflater.cloneInContext(contextThemeWrapper)
+
+        _binding = FragmentQuizBinding.inflate(localInflater, container, false)
         return binding.root
     }
 
@@ -38,9 +57,10 @@ class QuizFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val fragmentArgs : QuizFragmentArgs by navArgs()
-        keysArray = fragmentArgs.answer ?: intArrayOf()
-        currentQuestion = fragmentArgs.currentQuestion
+//        (activity as MainActivity).actionBar.setBackgroundDrawable(
+//             ColorDrawable(resources.getColor(R.styleable.ActionBar_background, themesArray[currentQuestion]))
+//        )
+
         val dataXMLParser = (activity as MainActivity).dataXMLParser
 
         if (currentQuestion != 0) binding.previousButton.isEnabled = true

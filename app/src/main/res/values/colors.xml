@@ -2,12 +2,27 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-    <color name="deep_orange_100">#ffccbc</color>
-    <color name="deep_orange_100_light">#ffffee</color>
-    <color name="deep_orange_100_dark">#cb9b8c</color>
-    <color name="yellow_100">#fff9c4</color>
-    <color name="yellow_100_light">#fffff7</color>
-    <color name="yellow_100_dark">#cbc693</color>
+
+    <color name="light_blue_100">#8DC6DC</color>
+    <color name="light_blue_100_light">#B9E0EF</color>
+    <color name="light_blue_100_dark">#2B4E5C</color>
+
+    <color name="blue_100">#5A94F6</color>
+    <color name="blue_100_light">#AACAFF</color>
+    <color name="blue_100_dark">#214B93</color>
+
+    <color name="yellow_100">#F1E791</color>
+    <color name="yellow_100_light">#EDEDD5</color>
+    <color name="yellow_100_dark">#8A8440</color>
+
+    <color name="deep_orange_100">#EF9E74</color>
+    <color name="deep_orange_100_light">#F6DBCC</color>
+    <color name="deep_orange_100_dark">#884C2D</color>
+
+    <color name="deep_red_100">#C85050</color>
+    <color name="deep_red_100_light">#E6A7A7</color>
+    <color name="deep_red_100_dark">#7A1C1C</color>
+
     <color name="light_green_100">#dcedc8</color>
     <color name="light_green_100_light">#fffffb</color>
     <color name="light_green_100_dark">#aabb97</color>

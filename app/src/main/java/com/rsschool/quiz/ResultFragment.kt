@@ -83,7 +83,7 @@ class ResultFragment : Fragment() {
         val myAnswer = resources.getText(R.string.my_answer)
         (activity as MainActivity).dataXMLParser.apply {
             for(i in 0..lastQuestionNumber()){
-                rString += ("$i+1) ${getQuestion(i)}\n" +
+                rString += ("${i+1}) ${getQuestion(i)}\n" +
                             "$myAnswer ${getAnswer(i, answers[i])}\n\n")
             }
         }

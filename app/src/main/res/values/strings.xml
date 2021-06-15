@@ -4,4 +4,10 @@
     <string name="button_text_preview">PREVIEW</string>
     <string name="button_text_next">NEXT</string>
     <string name="toolbar_title_next">Question</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="result_answered">You have answered</string>
+    <string name="out_of">/</string>
+    <string name="button_result_back">Back</string>
+    <string name="button_result_exit">Exit</string>
+    <string name="button_result_share">Share</string>
 </resources>

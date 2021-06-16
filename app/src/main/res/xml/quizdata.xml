@@ -2,60 +2,164 @@
 <quizdata>
     <questions>
         <question>
-            <title>Вопрос 1</title>
+            <title>Сколько океанов на нашей планете?</title>
             <answers>
-                <answer>Ответ 1 на вопрос 1</answer>
-                <answer>Ответ 2 на вопрос 1</answer>
-                <answer>Ответ 3 на вопрос 1</answer>
+                <answer>3</answer>
+                <answer>4</answer>
+                <answer>5</answer>
+                <answer>6</answer>
+                <answer>8</answer>
             </answers>
         </question>
         <question>
-            <title>Вопрос 2</title>
+            <title>Единица измерения силы тока - это:</title>
             <answers>
-                <answer>Ответ 1 на вопрос 2</answer>
-                <answer>Ответ 2 на вопрос 2</answer>
-                <answer>Ответ 3 на вопрос 2</answer>
-                <answer>Ответ 4 на вопрос 2</answer>
-                <answer>Ответ 5 на вопрос 2</answer>
+                <answer>Ампер</answer>
+                <answer>Вольт</answer>
+                <answer>Ватт</answer>
+                <answer>Ом</answer>
+                <answer>Кельвин</answer>
+                <answer>Моль</answer>
             </answers>
         </question>
         <question>
-            <title>Вопрос 3</title>
+            <title>Сатурн - это какая по счету планета от солнца?</title>
             <answers>
-                <answer>Ответ 1 на вопрос 3</answer>
-                <answer>Ответ 2 на вопрос 3</answer>
-                <answer>Ответ 3 на вопрос 3</answer>
-                <answer>Ответ 4 на вопрос 3</answer>
+                <answer>1</answer>
+                <answer>3</answer>
+                <answer>5</answer>
+                <answer>6</answer>
+                <answer>9</answer>
+                <answer>11</answer>
             </answers>
         </question>
         <question>
-            <title>Вопрос 4</title>
+            <title>Какой элемент переодической системы химических элементов обозначается как Ag</title>
             <answers>
-                <answer>Ответ 1 на вопрос 4</answer>
-                <answer>Ответ 2 на вопрос 4</answer>
-                <answer>Ответ 3 на вопрос 4</answer>
-                <answer>Ответ 4 на вопрос 4</answer>
-                <answer>Ответ 5 на вопрос 4</answer>
+                <answer>Золото</answer>
+                <answer>Аргон</answer>
+                <answer>Ртуть</answer>
+                <answer>Калий</answer>
+                <answer>Этил</answer>
+                <answer>Бензол</answer>
+                <answer>Серебро</answer>
             </answers>
         </question>
         <question>
-            <title>Вопрос 5</title>
+            <title>Сколько будет 0,2 км в дециметрах?</title>
             <answers>
-                <answer>Ответ 1 на вопрос 5</answer>
-                <answer>Ответ 2 на вопрос 5</answer>
-                <answer>Ответ 3 на вопрос 5</answer>
-                <answer>Ответ 4 на вопрос 5</answer>
-                <answer>Ответ 5 на вопрос 5</answer>
-                <answer>Ответ 6 на вопрос 5</answer>
-                <answer>Ответ 7 на вопрос 5</answer>
+                <answer>2 000 000 дм</answer>
+                <answer>200 000 дм</answer>
+                <answer>20 000 дм</answer>
+                <answer>2 000 дм</answer>
+                <answer>200 дм</answer>
+                <answer>20 дм</answer>
+            </answers>
+        </question>
+        <question>
+            <title>Самая длинная река в мире - это:</title>
+            <answers>
+                <answer>Обь</answer>
+                <answer>Волга</answer>
+                <answer>Ниль</answer>
+                <answer>Иртыш</answer>
+                <answer>Амазонка</answer>
+                <answer>Урал</answer>
+            </answers>
+        </question>
+        <question>
+            <title>Какое число обозначается римскими цифрами LXXVII?</title>
+            <answers>
+                <answer>42</answer>
+                <answer>64</answer>
+                <answer>97</answer>
+                <answer>127</answer>
+                <answer>3</answer>
+                <answer>77</answer>
+                <answer>82</answer>
+                <answer>55</answer>
+            </answers>
+        </question>
+        <question>
+            <title>В каком предложении допущенна ошибка?</title>
+            <answers>
+                <answer>На ней не было чулок</answer>
+                <answer>На полке лежала пачка макаронов</answer>
+                <answer>Эти кремы просрочены</answer>
+                <answer>В 1 и 2-ом</answer>
+                <answer>В 1 м 3-м</answer>
+                <answer>Во 2-ом и 3-м</answer>
+                <answer>Во всех</answer>
+                <answer>Нет ошибок</answer>
+            </answers>
+        </question>
+        <question>
+            <title>Зеленый пигмент, окрашивающий листья растений, называется:</title>
+            <answers>
+                <answer>Хлоровиллипт</answer>
+                <answer>Хлорофилл</answer>
+                <answer>Хлоропласт</answer>
+                <answer>Хлоргексидин</answer>
+                <answer>Хлороформ</answer>
+            </answers>
+        </question>
+        <question>
+            <title>Все знают приставку "Кило-", а как насчет "Гекто-"? Это сколько?</title>
+            <answers>
+                <answer>10</answer>
+                <answer>100</answer>
+                <answer>1 000</answer>
+                <answer>10 000</answer>
+                <answer>100 000</answer>
+                <answer>1 000 000</answer>
+            </answers>
+        </question>
+        <question>
+            <title>Желч образуется в:</title>
+            <answers>
+                <answer>Желчном пузыре</answer>
+                <answer>Поджелудочной железе</answer>
+                <answer>Щитовидной железе</answer>
+                <answer>Печени</answer>
+                <answer>Сердце</answer>
+                <answer>Рту</answer>
+            </answers>
+        </question>
+        <question>
+            <title>Почему времена года сменяют друг друга</title>
+            <answers>
+                <answer>Из-за удаления и приблежения Земли к Солнцу</answer>
+                <answer>Из-за наклона земной оси</answer>
+                <answer>Из-за вращения Земли вокруг своей оси</answer>
+                <answer>Из-за изменений температуры солнца</answer>
+                <answer>Из-за глобального потепления</answer>
+            </answers>
+        </question>
+        <question>
+            <title>Сколько хромосом в геноме человека</title>
+            <answers>
+                <answer>38</answer>
+                <answer>42</answer>
+                <answer>44</answer>
+                <answer>46</answer>
+                <answer>52</answer>
+                <answer>92</answer>
             </answers>
         </question>
     </questions>
     <keys>
-        <key>1</key>
-        <key>2</key>
         <key>3</key>
+        <key>1</key>
+        <key>4</key>
+        <key>7</key>
         <key>4</key>
         <key>5</key>
+        <key>6</key>
+        <key>2</key>
+        <key>2</key>
+        <key>2</key>
+        <key>4</key>
+        <key>2</key>
+        <key>4</key>
     </keys>
 </quizdata>

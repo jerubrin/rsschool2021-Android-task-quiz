@@ -44,7 +44,7 @@ class QuizFragment : Fragment() {
 
         val contextThemeWrapper = ContextThemeWrapper(
             activity,
-            themesArray[currentQuestion % 6]
+            themesArray[currentQuestion % (themesArray.lastIndex + 1)]
         )
         val localInflater = inflater.cloneInContext(contextThemeWrapper)
         val typedValue = TypedValue()

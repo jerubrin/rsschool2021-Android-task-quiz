@@ -23,9 +23,9 @@
     <color name="deep_red_100_light">#E6A7A7</color>
     <color name="deep_red_100_dark">#7A1C1C</color>
 
-    <color name="light_green_100">#dcedc8</color>
-    <color name="light_green_100_light">#fffffb</color>
-    <color name="light_green_100_dark">#aabb97</color>
+    <color name="light_green_100">#C3F38A</color>
+    <color name="light_green_100_light">#D5F8CA</color>
+    <color name="light_green_100_dark">#4F7E1A</color>
     <color name="cyan_100">#b2ebf2</color>
     <color name="cyan_100_light">#e5ffff</color>
     <color name="cyan_100_dark">#81b9bf</color>

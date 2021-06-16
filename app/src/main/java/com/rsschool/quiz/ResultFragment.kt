@@ -3,10 +3,12 @@ package com.rsschool.quiz
 import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
+import android.util.TypedValue
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.appcompat.view.ContextThemeWrapper
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import com.rsschool.quiz.databinding.FragmentResultBinding
@@ -19,7 +21,16 @@ class ResultFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        _binding = FragmentResultBinding.inflate(inflater, container, false)
+        val contextThemeWrapper = ContextThemeWrapper(
+            activity,
+            R.style.Theme_Quiz_Result
+        )
+        val localInflater = inflater.cloneInContext(contextThemeWrapper)
+        val typedValue = TypedValue()
+        contextThemeWrapper.theme?.resolveAttribute(android.R.attr.statusBarColor, typedValue, true)
+        activity?.window?.statusBarColor = typedValue.data
+
+        _binding = FragmentResultBinding.inflate(localInflater, container, false)
         return binding.root
     }
 

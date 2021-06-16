@@ -1,12 +1,14 @@
 package com.rsschool.quiz
 
-import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
+import android.util.TypedValue
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.RadioButton
 import androidx.appcompat.view.ContextThemeWrapper
+import androidx.core.graphics.drawable.toDrawable
+import androidx.core.graphics.toColor
 import androidx.core.view.forEachIndexed
 import androidx.core.view.get
 import androidx.fragment.app.Fragment
@@ -41,9 +43,12 @@ class QuizFragment : Fragment() {
 
         val contextThemeWrapper = ContextThemeWrapper(
             activity,
-            if(currentQuestion <= 5) themesArray[currentQuestion] else themesArray[6]
+            themesArray[currentQuestion % 6]
         )
         val localInflater = inflater.cloneInContext(contextThemeWrapper)
+        val typedValue = TypedValue()
+        contextThemeWrapper.theme?.resolveAttribute(android.R.attr.statusBarColor, typedValue, true)
+        activity?.window?.statusBarColor = typedValue.data
 
         _binding = FragmentQuizBinding.inflate(localInflater, container, false)
         return binding.root
@@ -56,10 +61,6 @@ class QuizFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
-//        (activity as MainActivity).actionBar.setBackgroundDrawable(
-//             ColorDrawable(resources.getColor(R.styleable.ActionBar_background, themesArray[currentQuestion]))
-//        )
 
         val dataXMLParser = (activity as MainActivity).dataXMLParser
 

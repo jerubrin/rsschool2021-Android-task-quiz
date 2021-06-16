@@ -7,8 +7,6 @@
                 <answer>Ответ 1 на вопрос 1</answer>
                 <answer>Ответ 2 на вопрос 1</answer>
                 <answer>Ответ 3 на вопрос 1</answer>
-                <answer>Ответ 4 на вопрос 1</answer>
-                <answer>Ответ 5 на вопрос 1</answer>
             </answers>
         </question>
         <question>
@@ -28,7 +26,6 @@
                 <answer>Ответ 2 на вопрос 3</answer>
                 <answer>Ответ 3 на вопрос 3</answer>
                 <answer>Ответ 4 на вопрос 3</answer>
-                <answer>Ответ 5 на вопрос 3</answer>
             </answers>
         </question>
         <question>
@@ -49,6 +46,8 @@
                 <answer>Ответ 3 на вопрос 5</answer>
                 <answer>Ответ 4 на вопрос 5</answer>
                 <answer>Ответ 5 на вопрос 5</answer>
+                <answer>Ответ 6 на вопрос 5</answer>
+                <answer>Ответ 7 на вопрос 5</answer>
             </answers>
         </question>
     </questions>

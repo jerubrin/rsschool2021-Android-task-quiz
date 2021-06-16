@@ -1,5 +1,6 @@
 package com.rsschool.quiz
 
+import android.opengl.Visibility
 import android.os.Bundle
 import android.util.TypedValue
 import android.view.LayoutInflater
@@ -65,6 +66,7 @@ class QuizFragment : Fragment() {
         val dataXMLParser = (activity as MainActivity).dataXMLParser
 
         if (currentQuestion != 0) binding.previousButton.isEnabled = true
+        else binding.toolbar.setNavigationIcon(null)
 
 
 
@@ -164,7 +166,10 @@ class QuizFragment : Fragment() {
         }
         binding.question.text = dataXMLParser.getQuestion(currentQuestion)
         dataXMLParser.getAnswerList(currentQuestion).forEachIndexed { index, str ->
-            (binding.radioGroup[index] as RadioButton).text = str
+            (binding.radioGroup[index] as RadioButton).apply {
+                text = str
+                visibility = View.VISIBLE
+            }
         }
     }
 }

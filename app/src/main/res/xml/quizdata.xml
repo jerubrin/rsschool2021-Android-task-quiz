@@ -34,7 +34,7 @@
             </answers>
         </question>
         <question>
-            <title>Какой элемент переодической системы химических элементов обозначается как Ag</title>
+            <title>Какой элемент периодической системы химических элементов обозначается как Ag?</title>
             <answers>
                 <answer>Золото</answer>
                 <answer>Аргон</answer>
@@ -61,7 +61,7 @@
             <answers>
                 <answer>Обь</answer>
                 <answer>Волга</answer>
-                <answer>Ниль</answer>
+                <answer>Нил</answer>
                 <answer>Иртыш</answer>
                 <answer>Амазонка</answer>
                 <answer>Урал</answer>
@@ -81,7 +81,7 @@
             </answers>
         </question>
         <question>
-            <title>В каком предложении допущенна ошибка?</title>
+            <title>В каком предложении допущена ошибка?</title>
             <answers>
                 <answer>На ней не было чулок</answer>
                 <answer>На полке лежала пачка макаронов</answer>
@@ -96,7 +96,7 @@
         <question>
             <title>Зеленый пигмент, окрашивающий листья растений, называется:</title>
             <answers>
-                <answer>Хлоровиллипт</answer>
+                <answer>Хлорофиллипт</answer>
                 <answer>Хлорофилл</answer>
                 <answer>Хлоропласт</answer>
                 <answer>Хлоргексидин</answer>
@@ -115,7 +115,7 @@
             </answers>
         </question>
         <question>
-            <title>Желч образуется в:</title>
+            <title>Желчь образуется в:</title>
             <answers>
                 <answer>Желчном пузыре</answer>
                 <answer>Поджелудочной железе</answer>
@@ -128,7 +128,7 @@
         <question>
             <title>Почему времена года сменяют друг друга</title>
             <answers>
-                <answer>Из-за удаления и приблежения Земли к Солнцу</answer>
+                <answer>Из-за удаления и приближения Земли к Солнцу</answer>
                 <answer>Из-за наклона земной оси</answer>
                 <answer>Из-за вращения Земли вокруг своей оси</answer>
                 <answer>Из-за изменений температуры солнца</answer>

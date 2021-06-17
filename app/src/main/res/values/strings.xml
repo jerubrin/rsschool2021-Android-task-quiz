@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Quiz</string>
+    <string name="app_name" translatable="false">Quiz</string>
     <string name="button_text_submit">SUBMIT</string>
     <string name="button_text_previous">Previous</string>
     <string name="button_text_next">NEXT</string>

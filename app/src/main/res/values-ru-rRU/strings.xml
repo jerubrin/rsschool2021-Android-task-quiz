@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="button_result_back">Назад</string>
+    <string name="button_result_exit">Выход</string>
+    <string name="button_result_share">Отправить</string>
+    <string name="button_text_next">Далее</string>
+    <string name="button_text_previous">Назад</string>
+    <string name="button_text_submit">Готово</string>
+    <string name="choose_client">Выберите Email клиент:</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="i_result_answered">Я ответил на</string>
+    <string name="list_of_question_title">Взгляни на мои ответы:</string>
+    <string name="my_answer">Мой ответ:</string>
+    <string name="out_of">" из "</string>
+    <string name="result_answered">Вы ответили на</string>
+    <string name="toolbar_title_next">Вопрос</string>
+</resources>

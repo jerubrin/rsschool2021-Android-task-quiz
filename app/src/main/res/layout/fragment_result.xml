@@ -6,6 +6,20 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".ResultFragment">
 
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_begin"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintGuide_begin="16dp"
+        android:orientation="vertical"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_end"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintGuide_end="16dp"
+        android:orientation="vertical"/>
+
     <TextView
         android:id="@+id/answered"
         android:layout_width="wrap_content"
@@ -46,34 +60,35 @@
         app:constraint_referenced_ids="button_back,button_exit,button_share"
         app:layout_constraintTop_toBottomOf="@id/present"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/guideline_begin"
+        app:layout_constraintEnd_toEndOf="@id/guideline_end"
         app:layout_constraintVertical_chainStyle="packed"
         app:layout_constraintHorizontal_chainStyle="packed"
-        app:flow_verticalGap="8dp"
         app:flow_horizontalGap="8dp"
-        app:flow_verticalBias="0"
-        app:flow_wrapMode="chain"/>
+        app:flow_wrapMode="chain"
+        android:padding="16dp"
+        />
+
         <Button
             android:id="@+id/button_back"
             android:text="@string/button_result_back"
             app:icon="@drawable/outline_autorenew_black_18"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="8dp" />
+            />
         <Button
             android:id="@+id/button_exit"
             android:text="@string/button_result_exit"
             app:icon="@drawable/outline_logout_black_18"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="8dp" />
+            />
         <Button
             android:id="@+id/button_share"
             android:text="@string/button_result_share"
             app:icon="@drawable/outline_share_black_18"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="8dp" />
+            />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -26,10 +26,44 @@
     <color name="light_green_100">#C3F38A</color>
     <color name="light_green_100_light">#D5F8CA</color>
     <color name="light_green_100_dark">#4F7E1A</color>
-    <color name="cyan_100">#b2ebf2</color>
-    <color name="cyan_100_light">#e5ffff</color>
-    <color name="cyan_100_dark">#81b9bf</color>
-    <color name="deep_purple_100">#d1c4e9</color>
-    <color name="deep_purple_100_light">#fff7ff</color>
-    <color name="deep_purple_100_dark">#a094b7</color>
+
+    <color name="cyan_100">#24C7DC</color>
+    <color name="cyan_100_light">#69C6C6</color>
+    <color name="cyan_100_dark">#251B8C98</color>
+
+    <color name="deep_purple_100">#A852F1</color>
+    <color name="deep_purple_100_light">#D0A2EC</color>
+    <color name="deep_purple_100_dark">#411C75</color>
+
+    <color name="deep_pink_100">#CA39B2</color>
+    <color name="deep_pink_100_light">#E1A0CE</color>
+    <color name="deep_pink_100_dark">#9A0D92</color>
+
+    <color name="deep_green_100">#E0FFEF</color>
+    <color name="deep_green_100_light">#FFFFFF</color>
+    <color name="deep_green_100_dark">#BBF1A3</color>
+
+    <color name="pink_100">#FB0065</color>
+    <color name="pink_100_light">#FF6DA8</color>
+    <color name="pink_100_dark">#6E0730</color>
+
+    <color name="new_cyan_100">#10E6B4</color>
+    <color name="new_cyan_100_light">#B3F4E5</color>
+    <color name="new_cyan_100_dark">#006049</color>
+
+    <color name="sunrise_100">#A5B504</color>
+    <color name="sunrise_100_light">#F6FF9E</color>
+    <color name="sunrise_100_dark">#646E00</color>
+
+    <color name="red_orange_100">#D65915</color>
+    <color name="red_orange_100_light">#EDA983</color>
+    <color name="red_orange_100_dark">#602403</color>
+
+    <color name="blue_sea_100">#1C7BAE</color>
+    <color name="blue_sea_100_light">#9FD2ED</color>
+    <color name="blue_sea_100_dark">#083750</color>
+
+    <color name="sunset_100">#935B09</color>
+    <color name="sunset_100_light">#533425</color>
+    <color name="sunset_100_dark">#DC857D</color>
 </resources>

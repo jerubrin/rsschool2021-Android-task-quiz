@@ -61,6 +61,116 @@
         <item name="android:statusBarColor">@color/deep_red_100_dark</item>
     </style>
 
+    <style name="Theme.Quiz.Sixth" parent="Theme.Quiz">
+        <item name="colorPrimary">@color/cyan_100</item>
+        <item name="colorPrimaryDark">@color/cyan_100_dark</item>
+        <item name="colorPrimaryVariant">@color/cyan_100_dark</item>
+        <item name="android:toolbarStyle">@color/cyan_100_dark</item>
+        <item name="colorSecondary">@color/cyan_100</item>
+        <item name="colorSecondaryVariant">@color/cyan_100_light</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">@color/cyan_100_dark</item>
+    </style>
+
+    <style name="Theme.Quiz.Seventh" parent="Theme.Quiz">
+        <item name="colorPrimary">@color/deep_purple_100</item>
+        <item name="colorPrimaryDark">@color/deep_purple_100_dark</item>
+        <item name="colorPrimaryVariant">@color/deep_purple_100_dark</item>
+        <item name="android:toolbarStyle">@color/deep_purple_100_dark</item>
+        <item name="colorSecondary">@color/deep_purple_100</item>
+        <item name="colorSecondaryVariant">@color/deep_purple_100_light</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">@color/deep_purple_100_dark</item>
+    </style>
+
+    <style name="Theme.Quiz.Eighth" parent="Theme.Quiz">
+        <item name="colorPrimary">@color/deep_pink_100</item>
+        <item name="colorPrimaryDark">@color/deep_pink_100_dark</item>
+        <item name="colorPrimaryVariant">@color/deep_pink_100_dark</item>
+        <item name="android:toolbarStyle">@color/deep_pink_100_dark</item>
+        <item name="colorSecondary">@color/deep_pink_100</item>
+        <item name="colorSecondaryVariant">@color/deep_pink_100_light</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">@color/deep_pink_100_dark</item>
+    </style>
+
+    <style name="Theme.Quiz.Ninth" parent="Theme.Quiz">
+        <item name="colorPrimary">@color/deep_green_100</item>
+        <item name="colorPrimaryDark">@color/deep_green_100_dark</item>
+        <item name="colorPrimaryVariant">@color/deep_green_100_dark</item>
+        <item name="android:toolbarStyle">@color/deep_green_100_dark</item>
+        <item name="colorSecondary">@color/deep_green_100</item>
+        <item name="colorSecondaryVariant">@color/deep_green_100_light</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">@color/deep_green_100_dark</item>
+    </style>
+
+    <style name="Theme.Quiz.Tenth" parent="Theme.Quiz">
+        <item name="colorPrimary">@color/pink_100</item>
+        <item name="colorPrimaryDark">@color/pink_100_dark</item>
+        <item name="colorPrimaryVariant">@color/pink_100_dark</item>
+        <item name="android:toolbarStyle">@color/pink_100_dark</item>
+        <item name="colorSecondary">@color/pink_100</item>
+        <item name="colorSecondaryVariant">@color/pink_100_light</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">@color/pink_100_dark</item>
+    </style>
+
+    <style name="Theme.Quiz.Eleventh" parent="Theme.Quiz">
+        <item name="colorPrimary">@color/new_cyan_100</item>
+        <item name="colorPrimaryDark">@color/new_cyan_100_dark</item>
+        <item name="colorPrimaryVariant">@color/new_cyan_100_dark</item>
+        <item name="android:toolbarStyle">@color/new_cyan_100_dark</item>
+        <item name="colorSecondary">@color/new_cyan_100</item>
+        <item name="colorSecondaryVariant">@color/new_cyan_100_light</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">@color/new_cyan_100_dark</item>
+    </style>
+
+    <style name="Theme.Quiz.Twelves" parent="Theme.Quiz">
+        <item name="colorPrimary">@color/sunrise_100</item>
+        <item name="colorPrimaryDark">@color/sunrise_100_dark</item>
+        <item name="colorPrimaryVariant">@color/sunrise_100_dark</item>
+        <item name="android:toolbarStyle">@color/sunrise_100_dark</item>
+        <item name="colorSecondary">@color/sunrise_100</item>
+        <item name="colorSecondaryVariant">@color/sunrise_100_light</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">@color/sunrise_100_dark</item>
+    </style>
+
+    <style name="Theme.Quiz.Thirteenth" parent="Theme.Quiz">
+        <item name="colorPrimary">@color/red_orange_100</item>
+        <item name="colorPrimaryDark">@color/red_orange_100_dark</item>
+        <item name="colorPrimaryVariant">@color/red_orange_100_dark</item>
+        <item name="android:toolbarStyle">@color/red_orange_100_dark</item>
+        <item name="colorSecondary">@color/red_orange_100</item>
+        <item name="colorSecondaryVariant">@color/red_orange_100_light</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">@color/red_orange_100_dark</item>
+    </style>
+
+    <style name="Theme.Quiz.Fourteenth" parent="Theme.Quiz">
+        <item name="colorPrimary">@color/blue_sea_100</item>
+        <item name="colorPrimaryDark">@color/blue_sea_100_dark</item>
+        <item name="colorPrimaryVariant">@color/blue_sea_100_dark</item>
+        <item name="android:toolbarStyle">@color/blue_sea_100_dark</item>
+        <item name="colorSecondary">@color/blue_sea_100</item>
+        <item name="colorSecondaryVariant">@color/blue_sea_100_light</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">@color/blue_sea_100_dark</item>
+    </style>
+
+    <style name="Theme.Quiz.Fifteenth" parent="Theme.Quiz">
+        <item name="colorPrimary">@color/sunset_100</item>
+        <item name="colorPrimaryDark">@color/sunset_100_dark</item>
+        <item name="colorPrimaryVariant">@color/sunset_100_dark</item>
+        <item name="android:toolbarStyle">@color/sunset_100_dark</item>
+        <item name="colorSecondary">@color/sunset_100</item>
+        <item name="colorSecondaryVariant">@color/sunset_100_light</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">@color/sunset_100_dark</item>
+    </style>
+
     <style name="Theme.Quiz.Result" parent="Theme.Quiz">
         <item name="colorPrimary">@color/light_green_100</item>
         <item name="colorPrimaryDark">@color/light_green_100_dark</item>

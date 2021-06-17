@@ -1,6 +1,6 @@
 package com.rsschool.quiz
 
-import android.opengl.Visibility
+
 import android.os.Bundle
 import android.util.TypedValue
 import android.view.LayoutInflater
@@ -8,8 +8,6 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.RadioButton
 import androidx.appcompat.view.ContextThemeWrapper
-import androidx.core.graphics.drawable.toDrawable
-import androidx.core.graphics.toColor
 import androidx.core.view.forEachIndexed
 import androidx.core.view.get
 import androidx.fragment.app.Fragment
@@ -30,7 +28,17 @@ class QuizFragment : Fragment() {
         R.style.Theme_Quiz_Second,
         R.style.Theme_Quiz_Third,
         R.style.Theme_Quiz_Fourth,
-        R.style.Theme_Quiz_Fives
+        R.style.Theme_Quiz_Fives,
+        R.style.Theme_Quiz_Sixth,
+        R.style.Theme_Quiz_Seventh,
+        R.style.Theme_Quiz_Eighth,
+        R.style.Theme_Quiz_Ninth,
+        R.style.Theme_Quiz_Tenth,
+        R.style.Theme_Quiz_Eleventh,
+        R.style.Theme_Quiz_Twelves,
+        R.style.Theme_Quiz_Thirteenth,
+        R.style.Theme_Quiz_Fourteenth,
+        R.style.Theme_Quiz_Fifteenth
     )
 
     override fun onCreateView(
@@ -66,7 +74,7 @@ class QuizFragment : Fragment() {
         val dataXMLParser = (activity as MainActivity).dataXMLParser
 
         if (currentQuestion != 0) binding.previousButton.isEnabled = true
-        else binding.toolbar.setNavigationIcon(null)
+        else binding.toolbar.navigationIcon = null
 
 
 
